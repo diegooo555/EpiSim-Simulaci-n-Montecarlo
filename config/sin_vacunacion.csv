@@ -1,0 +1,20 @@
+parametro,valor,descripcion
+nombre,sin_vacunacion,Nombre del escenario (carpeta de resultados)
+poblacion,10000,Individuos en la simulación (N)
+infectados_iniciales,10,Casos índice (estado I en el día 0)
+dias,365,Horizonte de simulación en días
+n_simulaciones,1000,Simulaciones Montecarlo aceptadas
+beta,"U(0.3, 0.5)",Contactos promedio por día de cada infeccioso (muestreado por simulación)
+periodo_incubacion,"U(2, 5)",Días en E (entero uniforme por individuo)
+periodo_infeccioso,"U(7, 14)",Días en I (entero uniforme por individuo)
+p_transmision,"U(0.4, 0.6)",Probabilidad de contagio si hay contacto (por simulación)
+cobertura_vacunacion,0,Sin vacunación (se consumen igual los R_i para usar los mismos números que con vacunación)
+efectividad_vacuna,"U(0.80, 0.95)",Reducción de susceptibilidad del vacunado (por simulación)
+letalidad,"U(0.005, 0.015)",SUPUESTO: probabilidad de fallecer al salir de I (por simulación)
+modo_contactos,estocastico,"estocastico: piso(R + beta) (media beta) | literal: piso(R * beta)"
+seleccion_contacto,poblacion,"poblacion: contacto al azar entre los N | susceptibles: al azar entre los S"
+umbral_control,0,Brote controlado cuando E + I <= umbral (después del pico)
+generador,lcg,"lcg: Congruencial Lineal | mult: Congruencial Multiplicativo (pseudo_gen)"
+semilla_maestra,12345,Semilla de la que se derivan los flujos de cada simulación
+validar_numeros,si,Aplicar las 6 pruebas a los R_i usados por cada simulación
+alpha,0.05,Nivel de significancia de las pruebas

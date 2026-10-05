@@ -1,0 +1,21 @@
+parametro,valor
+beta,"U(0.3, 0.5)"
+periodo_incubacion,"U(2, 5)"
+periodo_infeccioso,"U(7, 14)"
+p_transmision,"U(0.4, 0.6)"
+cobertura_vacunacion,0.0
+efectividad_vacuna,"U(0.8, 0.95)"
+letalidad,"U(0.005, 0.015)"
+poblacion,10000
+infectados_iniciales,10
+dias,365
+n_simulaciones,1000
+umbral_control,0
+semilla_maestra,12345
+alpha,0.05
+modo_contactos,estocastico
+seleccion_contacto,poblacion
+generador,lcg
+validar_numeros,si
+nombre,sin_vacunacion
+archivo_semillas,

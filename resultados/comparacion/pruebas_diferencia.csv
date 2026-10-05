@@ -1,0 +1,5 @@
+comparacion,metrica,media_a,media_b,reduccion_pct,U,p_valor
+sin_vacunacion vs con_vacunacion,total_infectados,7912.179,1866.004,76.41605428795279,995303.5,0.0
+sin_vacunacion vs con_vacunacion,pico_infectados,2064.107,248.615,87.95532402147757,984369.5,6.122802948651477e-308
+sin_vacunacion vs con_vacunacion,fallecidos,77.876,18.056,76.81442292875855,958663.5,1.0929883595171996e-276
+sin_vacunacion vs con_vacunacion,dia_pico,79.525,100.836,-26.797862307450472,406242.0,3.8361420604855337e-13

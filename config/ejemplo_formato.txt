@@ -1,0 +1,6 @@
+# Ejemplo del formato .txt (equivale a un .csv). Lo que no aparece toma el valor por defecto.
+# Escenario: lectura literal del enunciado, contactos = piso(R * beta).
+nombre = literal_enunciado
+modo_contactos = literal
+beta = U(0.3, 0.5)
+n_simulaciones = 100

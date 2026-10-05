@@ -1,0 +1,91 @@
+EpiSim - traza del uso de los números pseudoaleatorios
+Escenario: con_vacunacion | Generador: Congruencial Lineal (Numerical Recipes)
+Flujo 0, semilla x0 = 12345 | Se detallan la inicialización y los días 1 a 2
+
+[param] R=0.020403 → beta = 0.3 + (0.5 − 0.3)·R = 0.3041
+[param] R=0.016548 → p_transmision = 0.4 + (0.6 − 0.4)·R = 0.4033
+[param] R=0.543156 → cobertura_vacunacion = 0.3 + (0.7 − 0.3)·R = 0.5173
+[param] R=0.634904 → efectividad_vacuna = 0.8 + (0.95 − 0.8)·R = 0.8952
+[param] R=0.910030 → letalidad = 0.005 + (0.015 − 0.005)·R = 0.0141
+[índice] R=0.112462 → individuo piso(R·10000) = 1124
+        R=0.495889 → período infeccioso de 1124 = 7 + piso(R·8) = 10 días (pasa a R el día 11)
+[índice] R=0.548349 → individuo piso(R·10000) = 5483
+        R=0.596100 → período infeccioso de 5483 = 7 + piso(R·8) = 11 días (pasa a R el día 12)
+[índice] R=0.783450 → individuo piso(R·10000) = 7834
+        R=0.039854 → período infeccioso de 7834 = 7 + piso(R·8) = 7 días (pasa a R el día 8)
+[índice] R=0.743801 → individuo piso(R·10000) = 7438
+        R=0.965809 → período infeccioso de 7438 = 7 + piso(R·8) = 14 días (pasa a R el día 15)
+[índice] R=0.073668 → individuo piso(R·10000) = 736
+        R=0.699607 → período infeccioso de 736 = 7 + piso(R·8) = 12 días (pasa a R el día 13)
+[índice] R=0.460294 → individuo piso(R·10000) = 4602
+        R=0.396484 → período infeccioso de 4602 = 7 + piso(R·8) = 10 días (pasa a R el día 11)
+[índice] R=0.959521 → individuo piso(R·10000) = 9595
+        R=0.406125 → período infeccioso de 9595 = 7 + piso(R·8) = 10 días (pasa a R el día 11)
+[índice] R=0.952764 → individuo piso(R·10000) = 9527
+        R=0.993678 → período infeccioso de 9527 = 7 + piso(R·8) = 14 días (pasa a R el día 15)
+[índice] R=0.663701 → individuo piso(R·10000) = 6637
+        R=0.422896 → período infeccioso de 6637 = 7 + piso(R·8) = 10 días (pasa a R el día 11)
+[índice] R=0.499925 → individuo piso(R·10000) = 4999
+        R=0.287285 → período infeccioso de 4999 = 7 + piso(R·8) = 9 días (pasa a R el día 10)
+[vacuna] R=0.423302 < cobertura 0.5173 → individuo 0 vacunado (factor de susceptibilidad 0.1048)
+[vacuna] R=0.155304 < cobertura 0.5173 → individuo 2 vacunado (factor de susceptibilidad 0.1048)
+[vacuna] R=0.088769 < cobertura 0.5173 → individuo 3 vacunado (factor de susceptibilidad 0.1048)
+[vacuna] R=0.311563 < cobertura 0.5173 → individuo 5 vacunado (factor de susceptibilidad 0.1048)
+[vacuna] R=0.007071 < cobertura 0.5173 → individuo 6 vacunado (factor de susceptibilidad 0.1048)
+[vacuna] ... 10000 R_i usados; 5148 vacunados (51.5%)
+
+══ Día 1 ══
+  Infeccioso 1124:
+    R=0.275661 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 5483:
+    R=0.441568 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 7834:
+    R=0.350415 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 7438:
+    R=0.342275 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 736:
+    R=0.767920 → contactos = piso(R + 0.3041) = 1
+    R=0.637226 → contacto con individuo 6372 (S, vacunado)
+    R=0.136645 ≥ p_efectiva = 0.4033·0.1048 = 0.0423 → sin contagio
+  Infeccioso 4602:
+    R=0.674349 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 9595:
+    R=0.835783 → contactos = piso(R + 0.3041) = 1
+    R=0.645590 → contacto con individuo 6455 (S)
+    R=0.498842 ≥ p_efectiva = 0.4033·1.0000 = 0.4033 → sin contagio
+  Infeccioso 9527:
+    R=0.028865 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 6637:
+    R=0.277652 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 4999:
+    R=0.261303 → contactos = piso(R + 0.3041) = 0
+  Fin del día 1: S=9990, E=0, I=10, R=0
+
+══ Día 2 ══
+  Infeccioso 1124:
+    R=0.230155 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 5483:
+    R=0.545241 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 7834:
+    R=0.238859 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 7438:
+    R=0.013680 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 736:
+    R=0.594346 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 4602:
+    R=0.439881 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 9595:
+    R=0.332328 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 9527:
+    R=0.579117 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 6637:
+    R=0.655933 → contactos = piso(R + 0.3041) = 0
+  Infeccioso 4999:
+    R=0.891731 → contactos = piso(R + 0.3041) = 1
+    R=0.869596 → contacto con individuo 8695 (S)
+    R=0.128079 < p_efectiva = 0.4033·1.0000 = 0.4033 → CONTAGIO (S → E)
+        R=0.259744 → incubación = 2 + piso(R·4) = 3 días (pasa a I el día 5)
+  Fin del día 2: S=9989, E=1, I=10, R=0
+
+
+Resultado: total infectados = 24, pico = 13 el día 9, fallecidos = 0, números usados = 10,493
